@@ -1,10 +1,10 @@
-package dmreshet.exceptions;
+package dmreshet.exceptions.wheretocatch;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class MiddleLevelExceptionHandling {
+public class LowLevelExceptionHandling {
     public static void main(String[] args) {
         System.out.println("Start of Test application");
         String[] array = execute();
@@ -14,12 +14,7 @@ public class MiddleLevelExceptionHandling {
 
     private static String[] execute() {
         String path = askPathToFile();
-        String content = null;
-        try {
-            content = openFile(path);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String content = openFile(path);
 
         return content.split("\\s");
     }
@@ -28,7 +23,7 @@ public class MiddleLevelExceptionHandling {
         return "E:\\Dropbox\\Projects\\JavaEE\\src\\dmreshet\\exceptions\\LowLevelExceptionHandling.java";
     }
 
-    public static String openFile(String path) throws IOException {
+    public static String openFile(String path) {
         try (FileReader reader = new FileReader(path)) {
             // constructor may throw FileNotFoundException
             StringBuilder sb = new StringBuilder();
@@ -39,6 +34,9 @@ public class MiddleLevelExceptionHandling {
                 sb.append((char) i);
             }
             return sb.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 }
