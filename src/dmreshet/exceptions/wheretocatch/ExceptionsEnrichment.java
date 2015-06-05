@@ -19,8 +19,7 @@ public class ExceptionsEnrichment {
 
     private static String[] execute() throws ApplicationException {
         String path = askPathToFile();
-        String content = null;
-        content = openFile(path);
+        String content = openFile(path);
 
         return content.split("\\s");
     }
