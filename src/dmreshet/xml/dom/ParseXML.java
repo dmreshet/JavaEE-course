@@ -29,7 +29,7 @@ public class ParseXML {
                         + nNode.getNodeName());
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("Student roll no : " + eElement.getAttribute("rollno"));
+                    System.out.println("IerarhMan roll no : " + eElement.getAttribute("rollno"));
                     System.out.println("First Name : "
                             + eElement.getElementsByTagName("firstname").item(0).getTextContent());
                     System.out.println("Last Name : "

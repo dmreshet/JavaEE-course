@@ -30,7 +30,7 @@ public class ExternalizableTest {
             ex.printStackTrace();
         }
         // распечатать восстановленное время
-        System.out.println("Student: " + student);
+        System.out.println("IerarhMan: " + student);
         System.out.println();
     }
 }

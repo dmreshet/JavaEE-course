@@ -29,7 +29,7 @@ public class SerialTest {
             ex.printStackTrace();
         }
         // распечатать восстановленное время
-        System.out.println("Student: " + student.toString());
+        System.out.println("IerarhMan: " + student.toString());
         System.out.println();
     }
 }
